@@ -1,0 +1,23 @@
+{
+    "short_name": "Ecotidien",
+    "name": "Ecotidien, l'appli écolo!",
+    "description":"Ecotidien vous suit tous les jours avec un nouveau conseil, dans le but de sensibilise à l'écologie",
+    "icons": [
+      {
+        "src": "/images/192logo.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/images/512logo.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "/?source=pwa",
+    "background_color": "#FFFFFF",
+    "display_override": ["window-control-overlay", "minimal-ui"],
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#5BA95D"
+}
