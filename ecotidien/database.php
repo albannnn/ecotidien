@@ -1,7 +1,6 @@
 <?php
 $servername = 'localhost';
 $username = 'root'; 
-// $password = 'Banban56890?'; 
 $bdd = 'ecotidien';
 
 
