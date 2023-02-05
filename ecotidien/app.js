@@ -42,7 +42,7 @@ if ("serviceWorker" in navigator) {
     body: data,
   })
   .then(function (result) {
-    return result.json();
+    return result.json(); 
   })
   .then(function (result){
     console.log(result[0].conseil);

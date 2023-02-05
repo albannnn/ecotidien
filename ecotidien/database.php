@@ -23,6 +23,6 @@ if($result = $conn -> query($requete)) {
         $listObjet[] = $objet;
     }
 } 
-$conn = null; // fermeture de la connexion
-echo json_encode($listObjet);  // encodage en fichier json de l'array avec toutes les astuces pour pouvoir les réutiliser et les afficher sur la page
+// $conn = null; // fermeture de la connexion
+json_encode($listObjet);  // encodage en fichier json de l'array avec toutes les astuces pour pouvoir les réutiliser et les afficher sur la page
 ?>
