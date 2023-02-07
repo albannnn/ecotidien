@@ -1,7 +1,7 @@
 <?php
 $servername = 'localhost';
 $username = 'root'; 
-// $password = 'Banban56890?'; 
+// $password = ''; 
 $bdd = 'ecotidien';
 
 
@@ -16,13 +16,14 @@ catch(PDOException $e){
 }
 
     
-$requete = "SELECT * FROM astuces";
-
+$requete = "SELECT * FROM astuces ";
+$listObjet = [];
 if($result = $conn -> query($requete)) {
     while($objet =  $result -> fetchAll(PDO::FETCH_ASSOC)){
         $listObjet[] = $objet;
     }
 } 
 // $conn = null; // fermeture de la connexion
-json_encode($listObjet);  // encodage en fichier json de l'array avec toutes les astuces pour pouvoir les réutiliser et les afficher sur la page
+var_dump($listObjet);
+//echo json_encode($listObjet);  // encodage en fichier json de l'array avec toutes les astuces pour pouvoir les réutiliser et les afficher sur la page
 ?>
