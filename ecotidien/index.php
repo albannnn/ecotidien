@@ -38,8 +38,10 @@
         
  <!-- Le haut de page, le logo centré au milieu--->    
         
+        <div class = 'header'>
+            <img id="logo" src="images/logo.png"/>
+        </div>
         
-        <img id="logo" src="images/logo.png"/>
         <br><br>
         
  <!-- Le milieu de page et l'astuce, en gros au milieu de la page-->       

@@ -1,26 +1,28 @@
 <?php
 $servername = 'localhost';
 $username = 'root'; 
+// $password = 'Banban56890?'; 
 $bdd = 'ecotidien';
 
 
 //On établit la connexion
-$conn = mysqli_connect($servername, $username,'',$bdd);
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=$bdd;charset=utf8mb4", $username,''); // Connexion avec PDO
+    $conn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Connexion Réussie";
+}
+catch(PDOException $e){
+    echo "Erreur :".$e->getMessage();
+}
 
-
-
-
- mysqli_set_charset($conn, "utf8");
     
-           
-
 $requete = "SELECT * FROM astuces";
 
-if($result = mysqli_query($conn, $requete)) {
-    while($objet = mysqli_fetch_assoc($result)){
+if($result = $conn -> query($requete)) {
+    while($objet =  $result -> fetchAll(PDO::FETCH_ASSOC)){
         $listObjet[] = $objet;
     }
 } 
-
-secho json_encode($listObjet); 
+// $conn = null; // fermeture de la connexion
+json_encode($listObjet);  // encodage en fichier json de l'array avec toutes les astuces pour pouvoir les réutiliser et les afficher sur la page
 ?>
