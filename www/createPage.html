@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles/connectPageStyles.css" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="manifest" href="manifest.json">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Ecotidien</title>
+        
+    </head>
+    <body>
+
+        <div>
+                
+                
+            <form action = 'php/ajouteUser.php' method = 'post'>
+                <input type='submit'  class='button'  value="S'inscrire" name="verif"> 
+                <input type='email'  class='regular'  name='email' placeholder="Email">
+                <br>
+                <input type='password'  class='regular'  name = 'password' placeholder="Mot de Passe">
+                <br>
+                <input type='text' class='regular' name ='username' placeholder="Nom d'utilisateur">
+                <br>
+                <input type='text' class='regular' name ='nom' placeholder="Nom">
+                <br>
+                <input tye='text' class='regular' name ='prénom' placeholder="Prénom">
+            </form>
+            <p id = "1"> ERREUR
+            </p>
+        </div>
+        
+    
+    </body>
+    <script type ="text/javascript" src="js/app.js"></script>
+</html>
